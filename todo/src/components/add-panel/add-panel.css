@@ -1,0 +1,23 @@
+.add-panel{
+    margin: 10px;
+}
+
+.add-panel input{
+    margin: 10px 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    outline: none;
+}
+
+.add-panel button {
+    display: block;
+    height: 40px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    font-size: 20px;
+}

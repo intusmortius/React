@@ -1,0 +1,18 @@
+.app-list-item{
+    font-size: 24px
+}
+
+.app-list-item button {
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.important{
+    color: steelblue;
+    font-weight: bold;
+}
