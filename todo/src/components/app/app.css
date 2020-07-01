@@ -1,3 +1,9 @@
 .app{
     margin: 50px auto;    
 }
+
+.search {
+    display: flex;    
+    justify-content: space-between;
+    margin: 10px 0;
+}

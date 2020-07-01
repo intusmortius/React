@@ -1,21 +1,29 @@
 import React, {Component} from 'react'
 import './app-search.css'
-import AppFilter from '../app-filter'
+
 
 export default class AppSearch extends Component {
     
-    
-  
-  render() {
-    
-    const {onSearch} = this.props;
+  state = {
+    term: ''
+  }  
+
+
+  onSearch = (e) => {
+    const term = e.target.value;
+    this.setState({term});
+    this.props.onSearch(term);
+  }
+
+
+  render() {    
 
       return ( 
           <span className='app-search d-flex justify-content-between'>
-            <input className='col-lg-8' type="text" name="" id="" placeholder="SOME"
-            onChange = {onSearch}
-            />
-            <AppFilter/>
+            <input type="text" name="" id="" placeholder="SOME"
+            onChange = {this.onSearch}
+            value = {this.state.term}
+            />            
           </span>
       );
     };

@@ -1,5 +1,5 @@
-.app-search{
-    margin: 20px auto;
+.app-search input{
+    width: 300px;
 }
 .app-search span {
     padding: 0;

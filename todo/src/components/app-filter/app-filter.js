@@ -3,12 +3,33 @@ import './app-filter.css'
 
 export default  class AppFilter extends Component {
 
+  buttons = [
+    {name: 'all', label: 'All'},
+    {name: 'active', label: 'Active'},
+    {name: 'done', label: 'Done'}
+  ];
+  
   render() {
+
+      const {onFilterChange} = this.props;
+
+      const buttons = this.buttons.map(({name, label})=>{
+      
+      const isActive = this.props.filter === name;
+      const clazz = isActive ? 'btn-info' : 'btn-outline-secondary';
+
+      return (
+      <button className= {`btn  ${clazz}`}
+              type="button"
+              key = {name}
+              onClick = {() => onFilterChange(name)}
+              >{label}</button>
+      )
+    });
+
     return (
-      <span className='col-lg-4 d-flex justify-content-end'>
-        <button className='btn btn-info' type="button">All</button>
-        <button className='btn btn-outline-secondary' type="button">Active</button>
-        <button className='btn btn-outline-secondary' type="button">Done</button>
+      <span>
+       {buttons}
       </span>
 
     );
