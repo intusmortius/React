@@ -1,0 +1,21 @@
+.header a{
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    font-size: 1.8rem;
+    margin: auto;
+}
+
+.header ul{
+    display: flex;
+    list-style: none;
+    align-items: center;    
+    margin: 0;
+}
+
+
+.header ul li {
+    margin-left: 3rem;
+}
